@@ -19,18 +19,7 @@ myForm.addEventListener('submit', function(e){
     }
 })
 
-const webpack = require('webpack');
-
-module.exports = {
-  plugins: [
-    new webpack.DefinePlugin({
-      'process.env.WEATHER_API_KEY': JSON.stringify(process.env.openWeatherApiKey),
-    }),
-  ],
-};
-
-
-const id = process.env.openWeatherApiKey;
+const id = 'ff1e36b6d1fa8a9c81b12e34a28354fc';
 const url = 'https://api.openweathermap.org/data/2.5/weather?units=metric&appid='+id;
 const searchWeather = () => {
     fetch(url+'&q='+searchBar.value)//Modifies  the url to search for the location entered by the user using the &q=
