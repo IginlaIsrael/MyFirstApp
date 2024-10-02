@@ -19,6 +19,17 @@ myForm.addEventListener('submit', function(e){
     }
 })
 
+const webpack = require('webpack');
+
+module.exports = {
+  plugins: [
+    new webpack.DefinePlugin({
+      'process.env.WEATHER_API_KEY': JSON.stringify(process.env.openWeatherApiKey),
+    }),
+  ],
+};
+
+
 const id = process.env.openWeatherApiKey;
 const url = 'https://api.openweathermap.org/data/2.5/weather?units=metric&appid='+id;
 const searchWeather = () => {
