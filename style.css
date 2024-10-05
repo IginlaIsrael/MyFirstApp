@@ -123,13 +123,16 @@
                     }
                     
                     /* Adding colours to the other children of the li */
-                    main li:nth-child(2){
+                    #main > section > ul.dark li:nth-child(1){
+                        background-color: #B26A84;
+                    }
+                    ul.dark li:nth-child(2){
                         background-color: #B0D4FF;
                     }
-                    main li:nth-child(3){
+                    ul.dark li:nth-child(3){
                         background-color: #D3B1F7;
                     }
-                    main li:nth-child(4){
+                    ul.dark li:nth-child(4){
                         background-color: #B5F5E8;
                     }
                     
@@ -155,3 +158,34 @@
                             transform: translate(0,0);
                         }
                     }
+                    /* Toggle Styling */
+                    #toggle{
+                        background-color: black;
+                        color: white;
+                        border-radius: 10px;
+                        margin-top: 20px;
+                        margin-left: 80px;
+                        cursor: pointer;
+                    }
+
+                    /* Dark-Mode Styling */
+
+                    main.dark {
+                        color: white;
+                        background-color: black;
+                    }
+                    #myForm.dark{
+                        color: rgb(176, 171, 171);
+                    }
+
+                    main li:nth-child(2) {
+                        background-color: #4677B2;
+                      }
+                      
+                      main li:nth-child(3) {
+                        background-color: #7744B2;
+                      }
+                      
+                      main li:nth-child(4) {
+                        background-color: #44B29A;
+                      }

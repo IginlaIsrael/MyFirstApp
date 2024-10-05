@@ -9,6 +9,10 @@ const guage = document.querySelector('#guage');
 const main = document.querySelector('#main');
 console.log(guage);
 const myForm = document.querySelector('#myForm');
+const id = 'ff1e36b6d1fa8a9c81b12e34a28354fc';
+const url = 'https://api.openweathermap.org/data/2.5/weather?units=metric&appid='+id;
+const list = document.querySelector('main > section > ul');
+  
 
 myForm.addEventListener('submit', function(e){
     // alert('hello')
@@ -19,8 +23,15 @@ myForm.addEventListener('submit', function(e){
     }
 })
 
-const id = 'ff1e36b6d1fa8a9c81b12e34a28354fc';
-const url = 'https://api.openweathermap.org/data/2.5/weather?units=metric&appid='+id;
+const flip = document.getElementById('toggle');
+
+flip.addEventListener('click', function(e){
+    main.classList.toggle('dark');
+    myForm.classList.toggle('dark');
+    list.classList.toggle('dark');
+
+})
+
 const searchWeather = () => {
     fetch(url+'&q='+searchBar.value)//Modifies  the url to search for the location entered by the user using the &q=
     .then(responsive => responsive.json())
