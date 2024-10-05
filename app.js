@@ -21,6 +21,8 @@ myForm.addEventListener('submit', function(e){
     if(searchBar.value != ''){
         searchWeather();
     }
+    //Automatic updates every 2 mins
+    setInterval(searchWeather,60000);
 })
 
 const flip = document.getElementById('toggle');
@@ -37,14 +39,14 @@ const searchWeather = () => {
     .then(responsive => responsive.json())
     .then(data => {
         console.log(data);
-        if(data.cod == 200){
+        if(data.cod == 200){//CHecking for successful code, if so it updates the following items
             city.querySelector('figcaption').textContent = data.name;//For changing the location to the location entered by the user
             temp.querySelector('figcaption span').textContent = data.main.temp //changes the temp to the temp of new location
             city.querySelector('img').src = 'https://flagsapi.com/'+data.sys.country+'/shiny/32.png' //This modifies the flag by changing it`s status code to that of the location entered by the user
 
             temp.querySelector('img').src = 'https://openweathermap.org/img/wn/'+ data.weather[0].icon+'@4x.png' //edits the image of the cloud to suit the environment of the location
 
-            description.textContent = data.weather[0].description; 
+            description.textContent = data.weather[0].description; //modifies the description section
 
             cloud.innerText = data.clouds.all;
             humid.innerText = data.main.humidity;
@@ -54,7 +56,7 @@ const searchWeather = () => {
             //Error Handling
             main.classList.add('error');
             
-            setTimeout(() => {
+            setTimeout(() => {//Gives a time for the error to run while delaying the execution of the callback function
                 main.classList.remove('error');
                 alert('Location Not Found');//what I really understand
             }, 1000);

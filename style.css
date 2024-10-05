@@ -122,17 +122,15 @@
                         margin: 5px 0;
                     }
                     
-                    /* Adding colours to the other children of the li */
-                    #main > section > ul.dark li:nth-child(1){
-                        background-color: #B26A84;
-                    }
-                    ul.dark li:nth-child(2){
+                    
+                    
+                    main li:nth-child(2){
                         background-color: #B0D4FF;
                     }
-                    ul.dark li:nth-child(3){
+                    main li:nth-child(3){
                         background-color: #D3B1F7;
                     }
-                    ul.dark li:nth-child(4){
+                    main li:nth-child(4){
                         background-color: #B5F5E8;
                     }
                     
@@ -177,8 +175,9 @@
                     #myForm.dark{
                         color: rgb(176, 171, 171);
                     }
+                    /* Adding colours to the other children of the li */
 
-                    main li:nth-child(2) {
+                      main li:nth-child(2) {
                         background-color: #4677B2;
                       }
                       
