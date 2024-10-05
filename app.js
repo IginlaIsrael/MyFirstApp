@@ -40,7 +40,7 @@ const searchWeather = () => {
             speed.innerText = data.wind.speed;
             guage.innerText = data.main.pressure;
         }else{
-            //false
+            //Error Handling
             main.classList.add('error');
             
             setTimeout(() => {
