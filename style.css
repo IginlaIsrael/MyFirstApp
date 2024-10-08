@@ -4,187 +4,184 @@
     box-sizing: border-box;
 } */
                     /* Body Styling */
-                    body{
-                        margin: 0;
-                        min-height: 100vh;
-                        display: flex;
-                        justify-content: center;
-                        align-items: center;
-                        background-image: 
-                            linear-gradient(
-                                to bottom,
-                                #dcdcdc 50%,
-                                #e9e9e9 50%,
-                            );
-                        font-family: 'Times New Roman', Times, serif;
-                    
-                    }
+body{
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: 
+    linear-gradient(
+    to bottom,
+    #dcdcdc 50%,
+    #e9e9e9 50%,
+    );
+    font-family: 'Times New Roman', Times, serif;                    
+}
                                         /* Form Styling */
-                    main{
-                        width: 300px;
-                        height: max-content;
-                        min-height: 300px;
-                        background-color: #f7f7f7;
-                        border-radius: 30px;
-                        box-shadow: 0 30px 50px rgba(88, 87, 87, 0.2);
-                        padding: 30px; /* To add padding  */
-                        box-sizing: border-box; /* To re-size the box to its original size */
-                        margin: 10px 0;
+main{
+    width: 300px;
+    height: max-content;
+    min-height: 300px;
+    background-color: #f7f7f7;
+    border-radius: 30px;
+    box-shadow: 0 30px 50px rgba(88, 87, 87, 0.2);
+    padding: 30px; /* To add padding  */
+    box-sizing: border-box; /* To re-size the box to its original size */
+    margin: 10px 0;
                     
-                    }
+}
                     
-                    main form{
-                        border: 1px solid rgb(69, 67, 67); /* To visually outline the border of the form for proper manipulation */
-                        display: flex; /To align child element positions/
-                        justify-content: space-between; /* To seperate the form and button as as to make the ui look better */
-                        border-radius: 10px;
-                    }
+main form{
+    border: 1px solid rgb(69, 67, 67); /* To visually outline the border of the form for proper manipulation */
+    display: flex; /To align child element positions/
+    justify-content: space-between; /* To seperate the form and button as as to make the ui look better */
+    border-radius: 10px;
+}
                     
-                    main form input,
-                    main form button{ /* This selects the main forms input and button for styling*/
-                        border: none; /This removes their borders/
-                        background-color: transparent;/* transparent; Removes their bgColor */
-                        outline: none;
-                        padding: 10px; /Adds more space inside 10px all round/
-                    }
-                    main form button{
-                        cursor: pointer;
-                    }
+main form input,
+main form button{ /* This selects the main forms input and button for styling*/
+    border: none; /This removes their borders/
+    background-color: transparent;/* transparent; Removes their bgColor */
+    outline: none;
+    padding: 10px; /Adds more space inside 10px all round/
+}
+main form button{
+    cursor: pointer;
+}
                     
-                    main form i{
-                        /* This reduces the prominence of the Search button */
-                        /* opacity: 0.7; */
-                    }
+main form i{
+    /* This reduces the prominence of the Search button */
+    /* opacity: 0.7; */
+}
                     
-                    main .result{
-                        /* Selects the result section in main  */
-                        padding-top: 20px;
-                        text-align: center;
-                    }
+main .result{
+    /* Selects the result section in main  */
+    padding-top: 20px;
+    text-align: center;
+}
                     
-                    main .result .name{
-                        /* Selects the figure name in the section result of the main  */
-                        font-weight: bold;
-                        font-size: large;
-                        display: flex;
-                        justify-content: center; /* To move the content to the center */
-                        align-items: center; /* To align the text and map image together */
-                        gap: 15px; /* Creates a distance of 15px between the text and map image */
-                    }
+main .result .name{
+    /* Selects the figure name in the section result of the main  */
+    font-weight: bold;
+    font-size: large;
+    display: flex;
+    justify-content: center; /* To move the content to the center */
+    align-items: center; /* To align the text and map image together */
+    gap: 15px; /* Creates a distance of 15px between the text and map image */
+}
                     
-                    main .temperature img{
-                        width: 150px;
-                        filter: drop-shadow(
-                            0 10px 50px black   /Creates a black shadow effect behind the photo/
-                        );
-                        cursor: pointer;
-                    }
-                    main .result figcaption{
-                        /* Selects the figcaption tag in result section of the main tag */
-                        font-size: 3rem;
-                        cursor: pointer;
-                    }
+main .temperature img{
+    width: 150px;
+    filter: drop-shadow(
+        0 10px 50px black   /* Creates a black shadow effect behind the photo */
+    );
+    cursor: pointer;
+}
+main .result figcaption{
+/* Selects the figcaption tag in result section of the main tag */
+    font-size: 3rem;
+    cursor: pointer;
+}
                     
-                    main .description{
-                        /* Selects the  class description in main */
-                        padding: 10px 0 30px;
-                        cursor: pointer;
-                    }
+main .description{
+/* Selects the  class description in main */
+    padding: 10px 0 30px;
+    cursor: pointer;
+}
                     
-                    main ul{
-                        list-style: none;
-                        display: grid;
-                        grid-template-columns: repeat(4,1fr);
-                        gap: 5px;
-                        margin-left: -60px;
-                        
-                        
-                    }
+main ul{
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 5px;
+    margin-left: -60px;
+}
                     
-                    main ul li{
-                        background-color: #FFD1DC;
-                        color: white;
-                        border-radius: 20px;
-                        padding: 15px 4px;
-                        background-image: linear-gradient(
-                            to bottom,
-                            transparent 50%,
-                            #0003 50%
-                        );
-                        font-weight: bold;
-                        font-size: small;
-                        cursor: pointer;
-                    }
+main ul li{
+    background-color: #FFD1DC;
+    color: white;
+    border-radius: 20px;
+    padding: 15px 4px;
+    background-image: linear-gradient(
+        to bottom,
+        transparent 50%,
+        #0003 50%
+    );
+    font-weight: bold;
+    font-size: small;
+    cursor: pointer;
+}
                     
-                    main ul li i{
-                        display: block!important; /Over-rides other display css codes and ensures the i tags are displayed in block/
-                        font-weight: 5rem;
-                        margin: 5px 0;
-                    }
+main ul li i{
+    display: block!important; /Over-rides other display css codes and ensures the i tags are displayed in block/
+    font-weight: 5rem;
+    margin: 5px 0;
+}
                     
                     
                     
-                    main li:nth-child(2){
-                        background-color: #B0D4FF;
-                    }
-                    main li:nth-child(3){
-                        background-color: #D3B1F7;
-                    }
-                    main li:nth-child(4){
-                        background-color: #B5F5E8;
-                    }
+main.dark li:nth-child(2){
+    background-color: #B0D4FF;
+}
+main.dark li:nth-child(3){
+    background-color: #D3B1F7;
+}
+main.dark li:nth-child(4){
+    background-color: #B5F5E8;
+}
                     
-                    main.error{
-                        animation: errorEffect 0.3s linear 1;
-                    }
-                    
-                    
-                    @keyframes errorEffect{
-                        0%{
-                            transform: translate(10px, 5px);
-                        }
-                        25%{
-                            transform: translate(-5px, 0px);
-                        }
-                        50%{
-                            transform: translate(8px, 2px);
-                        }
-                        75%{
-                            transform: translate(-2px, 5px);
-                        }
-                        100%{
-                            transform: translate(0,0);
-                        }
-                    }
+main.error{
+    animation: errorEffect 0.3s linear 1;
+}
+
+
+@keyframes errorEffect{
+    0%{
+        transform: translate(10px, 5px);
+    }
+    25%{
+        transform: translate(-5px, 0px);
+    }
+    50%{
+        transform: translate(8px, 2px);
+    }
+    75%{
+        transform: translate(-2px, 5px);
+    }
+    100%{
+        transform: translate(0,0);
+    }
+}
                     /* Toggle Styling */
-                    #toggle{
-                        background-color: black;
-                        color: white;
-                        border-radius: 10px;
-                        margin-top: 20px;
-                        margin-left: 80px;
-                        cursor: pointer;
-                    }
+#toggle{
+    background-color: black;
+    color: white;
+    border-radius: 10px;
+    margin-top: 20px;
+    margin-left: 80px;
+    cursor: pointer;
+}
 
                     /* Dark-Mode Styling */
 
-                    main.dark {
-                        color: white;
-                        background-color: black;
-                    }
-                    #myForm.dark{
-                        color: rgb(176, 171, 171);
-                    }
-                    /* Adding colours to the other children of the li */
+main.dark {
+    color: white;
+    background-color: black;
+}
+#myForm.dark{
+color: rgb(176, 171, 171);
+}
+/* Adding colours to the other children of the li */
 
-                      main li:nth-child(2) {
-                        background-color: #4677B2;
-                      }
+main li:nth-child(2) {
+    background-color: #4677B2;
+}
                       
-                      main li:nth-child(3) {
-                        background-color: #7744B2;
-                      }
+main li:nth-child(3) {
+    background-color: #7744B2;
+}
                       
-                      main li:nth-child(4) {
-                        background-color: #44B29A;
-                      }
+main li:nth-child(4) {
+    background-color: #44B29A;
+}
