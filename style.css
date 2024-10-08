@@ -20,7 +20,7 @@ body{
 }
                                         /* Form Styling */
 main{
-    width: 300px;
+    width: 310px;
     height: max-content;
     min-height: 300px;
     background-color: #f7f7f7;
@@ -34,17 +34,18 @@ main{
                     
 main form{
     border: 1px solid rgb(69, 67, 67); /* To visually outline the border of the form for proper manipulation */
-    display: flex; /To align child element positions/
+    display: flex; /* To align child element positions */
     justify-content: space-between; /* To seperate the form and button as as to make the ui look better */
     border-radius: 10px;
 }
                     
 main form input,
-main form button{ /* This selects the main forms input and button for styling*/
-    border: none; /This removes their borders/
-    background-color: transparent;/* transparent; Removes their bgColor */
+main form button{ 
+/* This selects the main forms input and button for styling*/
+    border: none; /* This removes their borders */
+    background-color: transparent; /* transparent; Removes their bgColor */
     outline: none;
-    padding: 10px; /Adds more space inside 10px all round/
+    padding: 10px; /* Adds more space inside 10px all round  */
 }
 main form button{
     cursor: pointer;
@@ -52,7 +53,7 @@ main form button{
                     
 main form i{
     /* This reduces the prominence of the Search button */
-    /* opacity: 0.7; */
+    opacity: 0.7;
 }
                     
 main .result{
@@ -95,11 +96,11 @@ main ul{
     display: grid;
     grid-template-columns: repeat(4,1fr);
     gap: 5px;
-    margin-left: -60px;
+    margin-left: -40px;
 }
                     
 main ul li{
-    background-color: #FFD1DC;
+    background-color: #b53636;
     color: white;
     border-radius: 20px;
     padding: 15px 4px;
@@ -114,12 +115,14 @@ main ul li{
 }
                     
 main ul li i{
-    display: block!important; /Over-rides other display css codes and ensures the i tags are displayed in block/
+    display: block!important; /* Over-rides other display css codes and ensures the i tags are displayed in block */
     font-weight: 5rem;
     margin: 5px 0;
 }
                     
-                    
+main.dark li:nth-child(1){
+    background-color: #a11c63;
+}                   
                     
 main.dark li:nth-child(2){
     background-color: #B0D4FF;
@@ -153,7 +156,7 @@ main.error{
         transform: translate(0,0);
     }
 }
-                    /* Toggle Styling */
+/*               Toggle Styling             */
 #toggle{
     background-color: black;
     color: white;
@@ -163,8 +166,7 @@ main.error{
     cursor: pointer;
 }
 
-                    /* Dark-Mode Styling */
-
+/*           Dark-Mode Styling          */
 main.dark {
     color: white;
     background-color: black;
@@ -172,7 +174,7 @@ main.dark {
 #myForm.dark{
 color: rgb(176, 171, 171);
 }
-/* Adding colours to the other children of the li */
+/*          Adding colours to the other children of the li           */
 
 main li:nth-child(2) {
     background-color: #4677B2;

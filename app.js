@@ -23,7 +23,7 @@ document.addEventListener('DOMContentLoaded', function(e){
             searchWeather();
         }
         //Automatic updates every 2 mins
-        setInterval(searchWeather,60000);
+        setInterval(searchWeather(searchWeather.value),60000);
     })
     //Toggle section
     const flip = document.getElementById('toggle');//selection the switch_mode button for manipulation
@@ -50,7 +50,7 @@ document.addEventListener('DOMContentLoaded', function(e){
 
                 description.textContent = data.weather[0].description; //modifies the description section
 
-                cloud.innerText = data.clouds.all;
+                cloud.innerText = data.main.feels_like;
                 humid.innerText = data.main.humidity;
                 speed.innerText = data.wind.speed;
                 guage.innerText = data.main.pressure;
@@ -67,6 +67,16 @@ document.addEventListener('DOMContentLoaded', function(e){
         })
     }
     //              Initial Apps, Default Location
+    // const userDefault = () => {
+    //     if(navigator.geolocation){
+    //         navigator.geolocation.getCurrentPosition(position => {
+    //             const {lat, long} = position.coords;//Gets the lang and long of the user
+
+    //             //Fetching weather using their coordinates
+    //             fetch('')
+    //         })
+    //     }
+    // }
     const initApp = () => {
         searchBar.value = 'lagos';
         searchWeather();
