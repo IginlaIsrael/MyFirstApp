@@ -24,7 +24,7 @@ document.addEventListener('DOMContentLoaded', function(e){
         }
         //Automatic updates every 2 mins
         setInterval(searchWeather(searchWeather.value),60000);
-    })
+    });
     //Toggle section
     const flip = document.getElementById('toggle');//selection the switch_mode button for manipulation
 
@@ -66,21 +66,54 @@ document.addEventListener('DOMContentLoaded', function(e){
             searchBar.value = '';//Resets the input field to empty whether the code runs successfuly or not
         })
     }
-    //              Initial Apps, Default Location
+
+    // const searchWeatherFromUserLocation = (lat,long) => {
+    //     fetch(url + `&lat=${lat}&lon=${long}`)
+    //     .then(responsive => responsive.json())//Converts the api response to JSON format
+    //     .then(data => {
+    //         console.log(data);//logging the JSON string for manipulation and debugging
+    //         if(data.cod == 200){//CHecking for successful code, if so it updates the following items
+    //             city.querySelector('figcaption').textContent = data.name;//For changing the location to the location entered by the user
+    //             temp.querySelector('figcaption span').textContent = data.main.temp //changes the temp to the temp of new location
+    //             city.querySelector('img').src = 'https://flagsapi.com/'+data.sys.country+'/shiny/32.png' //This modifies the flag by changing it`s status code to that of the location entered by the user
+
+    //             temp.querySelector('img').src = 'https://openweathermap.org/img/wn/'+ data.weather[0].icon+'@4x.png' //edits the image of the cloud to suit the environment of the location
+
+    //             description.textContent = data.weather[0].description; //modifies the description section
+
+    //             cloud.innerText = data.main.feels_like;
+    //             humid.innerText = data.main.humidity;
+    //             speed.innerText = data.wind.speed;
+    //             guage.innerText = data.main.pressure;
+    //         }else {
+    //         searchWeather();//falls back to lagos as default
+    //     }
+    // })
+    // //              Initial Apps, Default Location
     // const userDefault = () => {
     //     if(navigator.geolocation){
     //         navigator.geolocation.getCurrentPosition(position => {
     //             const {lat, long} = position.coords;//Gets the lang and long of the user
 
     //             //Fetching weather using their coordinates
-    //             fetch('')
-    //         })
-    //     }
+    //             searchWeatherFromUserLocation(lat,long);
+    //         }),
+    //         (error) => {
+    //             console.error(error);
+    //             alert('Geolocation failed. Using default location (Lagos).');
+    //             searchBar.value = 'lagos';
+    //             searchWeather();
+    //         }   
+    //     }else{
+    //         searchBar.value = 'lagos';
+    //         searchWeather();//falls back to lagos as default
+    //     }}
     // }
     const initApp = () => {
         searchBar.value = 'lagos';
         searchWeather();
     }
+
     initApp();
 
 });
