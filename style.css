@@ -172,7 +172,8 @@ main.dark {
     background-color: black;
 }
 #myForm.dark{
-color: rgb(176, 171, 171);
+    /* color: rgb(176, 171, 171); */
+    background-color: white;
 }
 /*          Adding colours to the other children of the li           */
 
